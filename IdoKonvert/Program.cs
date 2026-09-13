@@ -15,7 +15,7 @@ int HanyPercTeltEl(int ora, int perc)
     return ora*VALTOSZAM+perc;
 }
 
-if ((joeO && o > 0 && o < 23) && (joeP && p > 0 && p < 59))
+if ((joeO && o >= 0 && o <= 23) && (joeP && p >= 0 && p <= 59))
 {
     System.Console.WriteLine($"A mai napból eltelt idő: {HanyPercTeltEl(o, p)} perc.");
     return;
