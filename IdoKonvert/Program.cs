@@ -11,7 +11,7 @@ bool joeP = int.TryParse(Console.ReadLine(), out int p);
 //Dzsó
 bool joe;
 
-if ((joeO && o > 0 && o < 23) && (joeP && p > 0 && p < 23))
+if ((joeO && o > 0 && o < 23) && (joeP && p > 0 && p < 59))
 {
     joe = true;
 }
