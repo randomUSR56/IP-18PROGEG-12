@@ -5,7 +5,7 @@ System.Console.Write("Óra(0-23): ");
 bool joeO = int.TryParse(Console.ReadLine(), out int o);
 
 //DzsóP
-System.Console.Write("\nPerc(0-59): ");
+System.Console.Write("Perc(0-59): ");
 bool joeP = int.TryParse(Console.ReadLine(), out int p);
 
 //Dzsó
