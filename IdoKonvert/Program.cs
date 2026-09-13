@@ -33,5 +33,5 @@ if (joe)
 }
 else
 {
-    System.Console.WriteLine("Érvénytelen");
+    System.Console.WriteLine("érvénytelen");
 }
