@@ -29,7 +29,7 @@ int HanyPercTeltEl(int ora, int perc)
 
 if (joe)
 {
- System.Console.WriteLine($"A mai napból eltelt idő, percekben:{HanyPercTeltEl(o, p)}");   
+ System.Console.WriteLine($"A mai napból eltelt idő: {HanyPercTeltEl(o, p)} perc.");   
 }
 else
 {
