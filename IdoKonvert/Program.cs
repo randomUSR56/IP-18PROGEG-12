@@ -8,18 +8,6 @@ bool joeO = int.TryParse(Console.ReadLine(), out int o);
 System.Console.Write("Perc(0-59): ");
 bool joeP = int.TryParse(Console.ReadLine(), out int p);
 
-//Dzsó
-bool joe;
-
-if ((joeO && o > 0 && o < 23) && (joeP && p > 0 && p < 59))
-{
-    joe = true;
-}
-else
-{
-    joe = false;
-}
-
 int HanyPercTeltEl(int ora, int perc)
 {
     //Mert 1 ora * 60 az 60 perc
@@ -27,11 +15,13 @@ int HanyPercTeltEl(int ora, int perc)
     return ora*VALTOSZAM+perc;
 }
 
-if (joe)
+if ((joeO && o > 0 && o < 23) && (joeP && p > 0 && p < 59))
 {
- System.Console.WriteLine($"A mai napból eltelt idő: {HanyPercTeltEl(o, p)} perc.");   
+    System.Console.WriteLine($"A mai napból eltelt idő: {HanyPercTeltEl(o, p)} perc.");
+    return;
 }
 else
 {
     System.Console.WriteLine("érvénytelen");
+    return;
 }
