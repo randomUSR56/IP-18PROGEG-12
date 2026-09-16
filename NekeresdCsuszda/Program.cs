@@ -3,7 +3,6 @@
 int kor;
 string jog;
 bool joe;
-bool jarKedvezmeny;
 bool nemJarKedvezmeny;
 const int MINIMUM_ELETKOR = 0;
 const int MAXIMUM_ELETKOR = 150;
