@@ -18,7 +18,7 @@ bool joe = BigInteger.TryParse(Console.ReadLine(), out BigInteger n) && n >= 0;
 if (joe)
 {
     BigInteger fakt = 1;
-    for (int i = 2; i <= n; i++)
+    for (BigInteger i = 2; i <= n; i++)
     {
         fakt *= i;
     }
