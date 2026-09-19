@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-int kor;
+﻿int kor;
 string jog;
 bool joe;
 bool nemJarKedvezmeny;
