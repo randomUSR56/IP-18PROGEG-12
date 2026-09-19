@@ -13,7 +13,7 @@
 using System.Numerics;
 
 System.Console.Write("Adjon egy termeszetes (0;1;2;..n) szamot: n = ");
-bool joe = int.TryParse(Console.ReadLine(), out int n) && n >= 0;
+bool joe = BigInteger.TryParse(Console.ReadLine(), out BigInteger n) && n >= 0;
 
 if (joe)
 {
