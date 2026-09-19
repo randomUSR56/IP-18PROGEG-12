@@ -28,4 +28,3 @@ else
 {
     System.Console.WriteLine("fakt = ervenytelen");
 }
-
