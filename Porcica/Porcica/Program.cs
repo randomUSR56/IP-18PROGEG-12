@@ -45,4 +45,4 @@ for (int i = 0; i < n; i++)
 }
 
 // kiiras
-System.Console.WriteLine($"\nEnnyi laborban volt tobb mint 10 porcica: {porcica} db");
+System.Console.WriteLine($"\nEnnyi laborban volt 10 vagy annal tobb porcica: {porcica} db");
