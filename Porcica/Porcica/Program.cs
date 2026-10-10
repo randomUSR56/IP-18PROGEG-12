@@ -6,6 +6,7 @@ int[] laborcica;
 int porcica;
 
 // beolvasas
+Console.Clear();
 do
 {
     System.Console.Write("Adja meg, hany laborban jart: ");
@@ -18,7 +19,7 @@ do
 } while (!joe);
 
 laborcica = new int[n];
-System.Console.WriteLine("Adja meg, mennyi porcicat talalt laboronkent!");
+System.Console.WriteLine("\nAdja meg, mennyi porcicat talalt laboronkent!");
 for (int i = 0; i < n; i++)
 {
     do
@@ -44,4 +45,4 @@ for (int i = 0; i < n; i++)
 }
 
 // kiiras
-System.Console.WriteLine($"Ennyi laborban volt tobb mint 10 porcica: {porcica}db");
+System.Console.WriteLine($"\nEnnyi laborban volt tobb mint 10 porcica: {porcica} db");
