@@ -4,21 +4,13 @@ int[] meresek;
 double[] jav;
 
 // beolvasas
-n = EllBeolv("Adja meg a mérések számát: ", "Hibás adat! Kérem, adjon meg egy egész számot 1-100 között.");
-meresek = new int[n];
-jav = new double[n];
-for (int i = 0; i < n; i++)
-{
-    meresek[i] = EllBeolv($"Adja meg a(z) {i + 1}. mérést: ", "Hibás adat! Nem egész szám.");
-}
+Beolvasas(out n, out meresek);
 
 // feldolgozas
-for (int i = 1; i <= n; i++) // i=1 mert illeszkednie kell a stukinak és UTÁNA toljuk el az indexek amikor hivatkozunk rá és használjuk
-{
-    jav[i-1] = Javitas(meresek[i-1]);
-}
+Feldolgozas(n, meresek, out jav);
+
 // kiiras
-Console.WriteLine($"A javított mérések: {string.Join(" ", jav)}");
+Kiiras(jav);
 
 int EllBeolv(string beker, string hiba)
 {
@@ -50,4 +42,28 @@ double Javitas(int meres)
         javitott = meres;
     }
     return javitott;
+}
+
+void Beolvasas(out int n, out int[] meresek)
+{
+    n = EllBeolv("Kérem a mérések számát: ", "Hibás adat! Kérem egész számot adjon meg!");
+    meresek = new int[n];
+    for (int i = 0; i < n; i++)
+    {
+        meresek[i] = EllBeolv($"Kérem a(z) {i + 1}. mérést: ", "Hibás adat! Kérem egész számot adjon meg!");
+    }
+}
+
+void Feldolgozas(int n, int[] meresek, out double[] jav)
+{
+    jav = new double[n];
+    for (int i = 0; i < n; i++) // i=1 mert illeszkednie kell a stukinak és UTÁNA toljuk el az indexek amikor hivatkozunk rá és használjuk
+    {
+        jav[i] = Javitas(meresek[i]);
+    }
+}
+
+void Kiiras(double[] jav)
+{
+    Console.WriteLine($"A javított mérések: {string.Join(' ', jav)}");
 }
