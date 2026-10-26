@@ -1,4 +1,4 @@
-﻿// ghub
+﻿// https://github.com/randomUSR56/IP-18PROGEG-12/blob/Loverseny/Loverseny/Program.cs
 // deklaralas
 int n;
 int[] lovak;
