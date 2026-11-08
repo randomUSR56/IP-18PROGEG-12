@@ -32,7 +32,7 @@ int[] EllBeolv(string prompt, string error_msg, int count)
     int[] x = new int[count];
     do
     {
-        string[] parts = (Console.ReadLine() ?? "").Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        string[] parts = Console.ReadLine().Split(' ');
         joe = parts.Length == count;
         for (int k = 0; joe && k < count; k++)
         {
