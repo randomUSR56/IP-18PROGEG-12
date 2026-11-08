@@ -52,9 +52,9 @@ void feldolgozas(out int db, int n)
 {
     db = 0;
     // mentes de azért rakok egyet mert tényleg aranyosak: 🦦
-    for (int i = 1; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        if (!tejleves(i-1))
+        if (!tejleves(i))
         {
             db = db + 1;
         }
@@ -72,7 +72,7 @@ bool tejleves(int i)
     bool van;
 
     j = 1;
-    while (j <= i-1 && !(dol[i] == dol[j]))
+    while (j <= i-1 && !(dol[i-1] == dol[j-1]))
     {
         j = j+1;
     }
