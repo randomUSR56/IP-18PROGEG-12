@@ -32,10 +32,11 @@ int[] EllBeolv(string prompt, string error_msg, int count)
     int[] x = new int[count];
     do
     {
-        string[] parts = Console.ReadLine().Split(' ');
+        string[] parts = Console.ReadLine().Split(' '); // split mert kénytelenek vagyunk feldolgozni minden inputban éerkező adatot még ha nincs is rá szükségünk
         joe = parts.Length == count;
         for (int k = 0; joe && k < count; k++)
         {
+            // ha parts 0. eleme van akkor futtatjuk az Ef. checket, amennyiben nem a 0. elemről van szó (se nem n, se nem életkor) akkor a (k>0 ||) rövidrezár és nem kerül az Ef. check kiértékelésre.
             joe = int.TryParse(parts[k], out x[k]) && (k > 0 || (1 <= x[k] && x[k] <= 100));
         }
         if (!joe)
@@ -50,6 +51,7 @@ int[] EllBeolv(string prompt, string error_msg, int count)
 void feldolgozas(out int db, int n)
 {
     db = 0;
+    // mentes de azért rakok egyet mert tényleg aranyosak: 🦦
     for (int i = 1; i < n; i++)
     {
         if (!tejleves(i-1))
